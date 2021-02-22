@@ -1,0 +1,175 @@
+$background: #252525;
+$highligts: #FFA630;
+$secondaryText: #9B9C96;
+$primaryActions: #EF3527;
+$white: #FFFFFF;
+
+:root {
+    font-size: 1em;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1300px;
+    overflow: auto;
+}
+
+.button {
+    display: inline-block;
+    background-color: $primaryActions;
+    padding: 1em 3em;
+    color: $background;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color .3s ease-in;
+
+    &:hover {
+        background-color: darken($color: $primaryActions, $amount: 15);
+    }
+
+}
+
+.heading {
+    color: $white;
+    font-size: 5.75em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.heading--middle {
+    font-size: 3.75rem;
+}
+
+.heading--little {
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.subHeading {
+    color: $white;
+    font-size: 1.9rem;
+}
+
+.text {
+    color: $white;
+    font-size: 1.125rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12.5em;
+    padding: 0 0.5em;
+}
+
+.menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    
+    li:not(:lastchild) {
+        margin-left: 2em;
+    }
+
+    a {
+        display: inline-block;
+        color: $white;
+        font-size: 1.125rem;
+        text-decoration: none;
+        padding: 2em 2.5em;
+        text-transform: uppercase;
+        transition: all 0.2 ease-in;
+
+        &:hover {
+            background-color: hsla(0, 0, 0, 0.2);
+        }
+
+    }
+}
+
+.lang {
+    text-transform: uppercase;
+    color: $white;
+    font-size: 1.125em;
+    position: relative;
+    padding-right: 1.5em;
+
+    &::after {
+        content: url(../images/ant-design_caret-down-outline.svg);
+        position: absolute;
+        top: 0.2em;
+        right: 0;
+    }
+
+}
+
+.header {
+    background: url(../images/Image.jpg) center center/cover no-repeat;
+}
+
+.header__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.play {
+    background-color: $white;
+    padding: 2em;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 0;
+    box-shadow: 0 0 0 1.5em hsla(0, 0, 0, 0.2);
+    margin: 3em 0 5em 0;
+}
+
+.scroll-button {
+    padding: 1.8em;
+}
+
+.logos {
+    padding: 2.5em 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.about-us {
+    background: url(../images/about-img.svg) 75vw bottom no-repeat;
+    background-color: $background;
+}
+
+.media-section {
+    margin: 7em 0;
+    background-image: linear-gradient(to right, $primaryActions 80%, transparent 80%);
+    display: flex;
+
+    img {
+        transform: translateY(-2.5em);
+    }
+
+}
+
+.media-section__content {
+    padding: 5em;
+}
+
+.hr {
+    display: inline-block;
+    border-top: 0.5em solid $highligts;
+    width: 20%;
+}
